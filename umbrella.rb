@@ -38,4 +38,9 @@ pirate_weather_parsed = JSON.parse(pirate_weather_raw)
 
 # Desired Weather Results
 
+currently = pirate_weather_parsed.fetch("currently")
 temperature = pirate_weather_parsed.fetch("temperature")
+summary = pirate_weather_parsed("summary")
+
+puts "The current temperature is: " + temperature.to_s + "."
+puts "It is currently " + summary + "."
